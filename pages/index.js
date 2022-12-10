@@ -11,6 +11,8 @@ import About from './About';
 import Services from './Services';
 import Submit from './Submit';
 import { Toaster } from 'react-hot-toast';
+import Footer from './Footer';
+import Projects from './Projects';
 
 
 
@@ -33,13 +35,13 @@ export default function Home() {
 
       <section>
         <Services/>
-        <Submit/>
+       <Projects/>
 
       </section>
 
-
+      <Submit/>
     </main>
-
+    <Footer/>
      
     </div>
   )

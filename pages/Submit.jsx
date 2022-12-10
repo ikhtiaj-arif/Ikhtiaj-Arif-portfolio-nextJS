@@ -12,6 +12,7 @@ const Submit = () => {
           .then((result) => {
               console.log(result.text);
               toast.success('success')
+              e.terger.reset()
               
           }, (error) => {
               console.log(error.text);
@@ -21,9 +22,10 @@ const Submit = () => {
 
 
   return (
-    <div>
+    <div className='p-10  shadow-2xl rounded-2xl'>
+      <h1 className='text-4xl font-medium text-center text-teal-500'>Get In Touch</h1>
       <form ref={form} onSubmit={sendEmail}
-      className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+      className="card flex-shrink-0 w-full md:w-3/4 lg:w-2/4 mx-auto ">
         <div className="card-body">
           <div className="form-control">
             <label className="label">
@@ -32,13 +34,9 @@ const Submit = () => {
             <input
               type="text"
               placeholder="name"
-              className="input input-bordered"
+              className="border rounded-lg px-4 py-2 w-full"
+              required
             />
-            <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
-                Forgot password?
-              </a>
-            </label>
           </div>
 
           <div className="form-control">
@@ -48,18 +46,19 @@ const Submit = () => {
             <input
               type="text"
               placeholder="email"
-              className="input input-bordered"
+              className="border rounded-lg px-4 py-2 w-full"
+              required
             />
           </div>
           <div className="form-control">
             <label className="label">
               <span className="label-text">Your Message</span>
             </label>
-            <input placeholder="message" className="textarea" />
+            <input placeholder="message" className="border rounded-lg px-4 py-2 w-full pb-12" required/>
           </div>
 
           <div className="form-control mt-6">
-            <button type="submit" className="btn btn-primary">submit</button>
+            <button type="submit" className="bg-gradient-to-r from-cyan-600 to-teal-500 text-white font-medium px-4 py-2 border-none rounded-lg ml-8 hover:bg-gradient-to-l ">submit</button>
           </div>
         </div>
       </form>
